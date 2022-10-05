@@ -1,3 +1,5 @@
+package ss1_Introduction_to_java.practice;
+
 import java.util.Date;
 
 public class SystemTime {
