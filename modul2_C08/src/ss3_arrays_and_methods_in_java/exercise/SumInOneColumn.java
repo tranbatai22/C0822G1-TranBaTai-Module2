@@ -37,6 +37,7 @@ public class SumInOneColumn {
                 System.out.println("Nhập lại độ dài phẩn tử mảng mảng lớn hơn  0");
             }
         } while (number2 <= 0);
+
         int[][] arr = new int[number1][number2];
         for (int i = 0; i <number1 ; i++) {
             for (int j = 0; j <number2 ; j++) {
