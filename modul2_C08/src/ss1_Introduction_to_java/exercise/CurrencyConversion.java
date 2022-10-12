@@ -1,7 +1,5 @@
 package ss1_Introduction_to_java.exercise;
-
 import java.util.Scanner;
-
 public class CurrencyConversion {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
