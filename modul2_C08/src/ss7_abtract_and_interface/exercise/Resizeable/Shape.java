@@ -1,6 +1,6 @@
-package ss6_Inheritance.practice;
+package ss7_abtract_and_interface.exercise.Resizeable;
 
-public class Shape {
+public abstract class Shape implements Resizeable {
     private String color = "green";
     private boolean filled = true;
 
@@ -30,6 +30,12 @@ public class Shape {
 
     @Override
     public String toString() {
-        return " color = " + color +  ", filled = " + filled ;
+        return getColor() + " and " + (isFilled());
+    }
+
+    public static void printShape(Shape[] shape) {
+        for (Shape x : shape) {
+            System.out.println(x.toString());
+        }
     }
 }

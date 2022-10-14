@@ -1,11 +1,10 @@
-package ss6_Inheritance.practice;
+package ss7_abtract_and_interface.exercise.Resizeable;
 
-public class Rectangle extends Circle {
+public class Rectangle extends Shape {
     private double width = 1.0;
     private double length = 1.0;
 
     public Rectangle() {
-
     }
 
     public Rectangle(double width, double length) {
@@ -13,8 +12,8 @@ public class Rectangle extends Circle {
         this.length = length;
     }
 
-    public Rectangle(String color, boolean filled, double radius, double width, double length) {
-        super(color, filled, radius);
+    public Rectangle(double width, double length, String color, boolean filled) {
+        super(color, filled);
         this.width = width;
         this.length = length;
     }
@@ -34,15 +33,23 @@ public class Rectangle extends Circle {
     public void setLength(double length) {
         this.length = length;
     }
-    public double getArea(){
-        return this.width * this.length;
+
+    public double getArea() {
+        return width * this.length;
     }
-    public double getPrameter(){
-        return 2 * (this.width + this.length );
+
+    public double getPerimeter() {
+        return 2 * (width + this.length);
     }
 
     @Override
     public String toString() {
-        return " width= " + width + ", length = " + length + super.toString();
+        return getWidth() + " " + getLength() + " " + super.toString() + ", " + + getArea();
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.length +=this.length*percent/100;
+        this.width +=this.width*percent/100;
     }
 }

@@ -1,4 +1,4 @@
-package ss6_Inheritance.practice;
+package ss7_abtract_and_interface.exercise.Resizeable;
 
 public class Circle extends Shape {
     private double radius = 1.0;
@@ -10,7 +10,7 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
-    public Circle(String color, boolean filled, double radius) {
+    public Circle(double radius, String color, boolean filled) {
         super(color, filled);
         this.radius = radius;
     }
@@ -26,12 +26,18 @@ public class Circle extends Shape {
     public double getArea() {
         return radius * radius * Math.PI;
     }
-    public double getPrimeter(){
+
+    public double getPerimeter() {
         return 2 * radius * Math.PI;
     }
 
     @Override
     public String toString() {
-        return " radius = " + radius + super.toString();
+        return getRadius() + ", " + super.toString() + ", " + + getArea();
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.radius += this.radius*percent/100;
     }
 }
