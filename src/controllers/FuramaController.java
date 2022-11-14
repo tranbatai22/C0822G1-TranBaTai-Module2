@@ -1,4 +1,4 @@
-package controllers.case_study_module_2.controllers;
+package controllers;
 
 import java.util.Scanner;
 
@@ -24,19 +24,19 @@ public class FuramaController {
         } while (option < 1 || option > 6);
         switch (option) {
             case 1:
-                Employee.getEmployee();
+                EmployeeManagement.getEmployee();
                 break;
             case 2:
-                Customer.getCustomer();
+                CustomerManagement.getCustomer();
                 break;
             case 3:
-                Facility.getFacility();
+                FacilityManagement.getFacility();
                 break;
             case 4:
-                Booking.getBooking();
+                BookingManagement.getBooking();
                 break;
             case 5:
-                Promotion.getPromotion();
+                PromotionManagement.getPromotion();
                 break;
             case 6:
                 break;

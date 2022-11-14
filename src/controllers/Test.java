@@ -1,4 +1,4 @@
-package controllers.case_study_module_2.controllers;
+package controllers;
 
 public class Test {
     public static void main(String[] args) {

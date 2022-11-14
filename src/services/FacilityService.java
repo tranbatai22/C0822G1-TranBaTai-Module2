@@ -1,4 +1,5 @@
 package services;
 
-public interface FacilityService {
+public interface FacilityService extends Service {
+    abstract void DisplayListMaintenance();
 }

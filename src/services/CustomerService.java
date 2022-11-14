@@ -1,4 +1,5 @@
 package services;
 
-public interface CustomerService {
+public interface CustomerService extends Service {
+    abstract void edit();
 }

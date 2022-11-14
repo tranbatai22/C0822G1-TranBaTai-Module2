@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="xay_dung_lop_mo_ta_temperature.js"></script>
+</body>
+<script>
+    class Temperature {
+        constructor(doC) {
+            this.doC = doC;
+        }
+        getDoCSangDoF() {
+            return this.doC / 5 * 9 + 32;
+        }
+        getDoCSangDoKevin() {
+            return this.doC + 273.15;
+        }
+    }
+    let temperature1 = new Temperature(25);
+    document.write("Độ F : " + temperature1.getDoCSangDoF() + "<br>");
+    document.write("Độ K : " + temperature1.getDoCSangDoKevin());
+</script>
+</html>
